@@ -7,6 +7,8 @@ sudo apt-get update -y
 
 echo "Installing Bosh dependencies for Ubuntu Bionic 18.04..."
 sudo apt-get install -y build-essential zlibc zlib1g-dev ruby ruby-dev openssl libxslt1-dev libxml2-dev libssl-dev libreadline7 libreadline-dev libyaml-dev libsqlite3-dev sqlite3 whois -y
+
+echo "Install AWS CLI tool via snap..."
 sudo snap install aws-cli --classic
 
 cd /home/ubuntu

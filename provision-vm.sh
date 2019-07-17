@@ -34,6 +34,6 @@ cp files/* .
 chmod +x *.sh
 
 # Setup Bosh files
-#priv_subnet_id=`/snap/bin/aws ec2 describe-subnets --filters "Name=tag:Name,Values=Private Subnet A" --query 'Subnets[*].SubnetId' --output text`
-#sed -i "s/enteryoursubnetidhere/$priv_subnet_id/g" do-bosh.sh
-#sed -i "s/enteryoursubnetidhere/$priv_subnet_id/g" update-cloud-config.sh
+priv_subnet_id=`/snap/bin/aws ec2 describe-subnets --filters "Name=tag:Name,Values=Private Subnet A" --query 'Subnets[*].SubnetId' --output text`
+sed -i "s/enteryoursubnetidhere/$priv_subnet_id/g" do-bosh.sh
+sed -i "s/enteryoursubnetidhere/$priv_subnet_id/g" update-cloud-config.sh

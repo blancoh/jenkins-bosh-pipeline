@@ -81,8 +81,8 @@ try {
     }
  // }
 
-    // Acquire Jumpbox Public IP
-    stage('Acquire Jumpbox Public IP') {
+    // SSH to Jumpbox and deploy Bosh
+    stage('SSH to Jumpbox and deploy Bosh') {
       node {
         withCredentials([[
           $class: 'AmazonWebServicesCredentialsBinding',
@@ -91,11 +91,28 @@ try {
           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
           ansiColor('xterm') {
-            sh ''
+            sh 'ec2_deploy_bosh.sh'
           }
         }
       }
     }
+
+#    // SSH to Jumpbox and deploy zookeeper sample app
+#    stage('SSH to Jumpbox and deploy Bosh') {
+#      node {
+#        withCredentials([[
+#          $class: 'AmazonWebServicesCredentialsBinding',
+#          credentialsId: credentialsId,
+#          accessKeyVariable: 'AWS_ACCESS_KEY_ID',
+#          secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
+#        ]]) {
+#          ansiColor('xterm') {
+#            sh 'ec2_deploy_app.sh'
+#          }
+#        }
+#      }
+#    }
+
 
     stage('Destroy Approval Input') {
       input 'Approve Terraform destroy?'

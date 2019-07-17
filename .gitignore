@@ -1,4 +1,4 @@
+*.pem
 .terraform*
 terraform.tfstate*
 files/
-bosh.pem

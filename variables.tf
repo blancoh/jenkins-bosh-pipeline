@@ -10,17 +10,6 @@ variable "aws_region" {
   description = "AWS region to launch servers."
   default     = "us-east-1"
 }
-# Ubuntu Bionic 18.04 LTS (x64)
-#variable "aws_amis" {
-#  default = {
-#    us-east-1 = "ami-026c8acd92718196b"
-#    ubuntu = "ami-026c8acd92718196b"
-#  }
-#}
-#variable "dnszonename" {
-#  default = "aws.example.net"
-#  description = "my internal dns name"
-#}
 variable "vpc_cidr" {
     default = "10.0.0.0/16"
   description = "the vpc cdir range"

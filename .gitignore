@@ -1,4 +1,3 @@
-*.pem
 .terraform*
 terraform.tfstate*
 files/

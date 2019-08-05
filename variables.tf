@@ -1,5 +1,5 @@
 variable "key_name" {
-  description = "Desired name of AWS key pair"
+  description = "Jumpbox AWS key pair"
   default     = "jumpbox"
 }
 variable "key_path" {
@@ -7,12 +7,12 @@ variable "key_path" {
   default = "./jumpbox.pem"
 }
 variable "aws_region" {
-  description = "AWS region to launch servers."
+  description = "AWS region"
   default     = "us-east-1"
 }
 variable "vpc_cidr" {
     default = "10.0.0.0/16"
-  description = "the vpc cdir range"
+  description = "the vpc cidr range"
 }
 variable "public_subnet_a" {
   default = "10.0.1.0/24"

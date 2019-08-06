@@ -91,7 +91,7 @@ try {
           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
           ansiColor('xterm') {
-            sh 'ec2_deploy_bosh.sh'
+            sh './ec2_deploy_bosh.sh'
           }
         }
       }

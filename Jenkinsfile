@@ -4,7 +4,7 @@ String credentialsId = 'awsCredentials'
 try {
   stage('GIT checkout') {
     node {
-      //cleanWs()
+      cleanWs()
       checkout scm
     }
   }

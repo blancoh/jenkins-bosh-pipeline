@@ -56,11 +56,6 @@ resource "aws_instance" "jumpbox" {
     script = "./provision-vm.sh"
   }
 
-  provisioner "file" {
-    source = "./ec2_deploy_bosh.sh"
-    destination = "/home/ubuntu/ec2_deploy_bosh.sh"
-  }
-
   provisioner "remote-exec" {
     inline = [ 
       "cd /home/ubuntu",

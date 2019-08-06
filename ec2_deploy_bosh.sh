@@ -4,4 +4,4 @@ ec2_publicip=`/usr/local/bin/aws ec2 describe-instances --filters "Name=tag:Name
 
 chmod 600 jumpbox.pem
 
-ssh -i jumpbox.pem ubuntu@$ec2_publicip "setup-bosh-env.sh"
+ssh -i jumpbox.pem ubuntu@$ec2_publicip "/home/ubuntu/setup-bosh-env.sh"

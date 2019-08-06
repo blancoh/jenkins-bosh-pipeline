@@ -56,12 +56,12 @@ resource "aws_instance" "jumpbox" {
     script = "./provision-vm.sh"
   }
 
-  provisioner "remote-exec" {
-    inline = [ 
-      "cd /home/ubuntu",
-      "./setup-bosh-env.sh"
-    ]
-  }
+  #provisioner "remote-exec" {
+  #  inline = [ 
+  #    "cd /home/ubuntu",
+  #    "./setup-bosh-env.sh"
+  #  ]
+  #}
 }
 
 resource "aws_security_group" "sec_web" {

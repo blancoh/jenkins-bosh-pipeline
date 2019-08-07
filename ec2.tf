@@ -59,8 +59,8 @@ resource "aws_instance" "jumpbox" {
 }
 
 resource "aws_security_group" "sec_jumpbox" {
-  name        = "sec_web"
-  description = "Used for autoscale group"
+  name        = "sec_jumpbox"
+  description = "Used for access to jumpbox"
   vpc_id      = "${aws_vpc.default.id}"
 
   # HTTP access from anywhere

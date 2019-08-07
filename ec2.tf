@@ -19,7 +19,7 @@ resource "aws_instance" "jumpbox" {
   instance_type = "t2.micro"
   subnet_id = "${aws_subnet.PublicSubnetA.id}"
   associate_public_ip_address = true
-  vpc_security_group_ids = ["${aws_security_group.sec_web.id}"]
+  vpc_security_group_ids = ["${aws_security_group.sec_jumpbox.id}"]
   key_name = "jumpbox"
 
   tags = {

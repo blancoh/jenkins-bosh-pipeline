@@ -2,4 +2,5 @@
 terraform.tfstate*
 files/
 *pem
-*.pem*
+*.pem
+.pem*

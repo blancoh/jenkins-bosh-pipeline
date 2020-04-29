@@ -15,7 +15,7 @@ cd /home/ubuntu
 
 echo "Create Bosh vars.yml file..."
 echo -n "vm_passwd: " > vars.yml
-mkpasswd -m sha-512 "b0sh2019" >> vars.yml
+mkpasswd -m sha-512 "b0sh2020" >> vars.yml
 sudo chown ubuntu:ubuntu vars.yml
 
 echo "Download Bosh CLI tool..."
